@@ -1,0 +1,17 @@
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+    <% if @dose.errors.any? %>
+    <ul>
+      <% @dose.errors.full_messages.each do |dose| %>
+      <li><%= message %></li>
+      <% end %>
+    <% end %>
+    </ul>
+  <!--   <%= f.text_field :ingredient_id %> -->
+    <%= f.association :cocktail %>
+    <%= f.association :ingredient %>
+    <%= f.input :description %>
+
+    <%= f.submit "add a dose", class: "btn btn-primary" %>
+<% end %>
+
