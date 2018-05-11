@@ -1,11 +1,31 @@
-
-<h1>Ma liste de mes cocktails</h1>
+<div class="container">
+<div class="my-container">
+<h1>Liste de mes cocktails</h1>
 
 <ul>
   <% @cocktails.each do |cocktail| %>
-  <li> <%= cocktail.name %>
+  <div class="my-card " style="width: 18rem;">
+    <li> <%= cocktail.name %><br>
 
-  <% end %>
+      <%= link_to "En savoir plus", cocktail_path(cocktail.id) %>
+
+    <% end %>
+  </div>
+
+<!-- <div class="btn btn-primary"> -->
+  <%= link_to "Créer un cocktail", new_cocktail_path %>
+<!-- </div> -->
 </ul>
 
+</div>
+</div>
 
+
+<!-- <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> -->
