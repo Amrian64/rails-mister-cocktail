@@ -1,24 +1,32 @@
-<div class="container">
-<div class="my-container">
-<h1>Liste de mes cocktails</h1>
-
-<ul>
-  <% @cocktails.each do |cocktail| %>
-  <div class="my-card " style="width: 18rem;">
-    <li> <%= cocktail.name %><br>
-
-      <%= link_to "En savoir plus", cocktail_path(cocktail.id) %>
-
-    <% end %>
+<div class="background-img">
+  <div class="flex-logo">
+    <%= image_tag("logo.png") %>
   </div>
 
-<!-- <div class="btn btn-primary"> -->
-  <%= link_to "Créer un cocktail", new_cocktail_path %>
-<!-- </div> -->
-</ul>
+    <div class="container">
+        <div class="row">
+          <% @cocktails.each do |cocktail| %>
+            <div class="col-xs-12 col-sm-4 col-lg-12">
+                <div class="card">
+                  <%= cocktail.name %><br>
+                  <%= link_to "En savoir plus", cocktail_path(cocktail.id) %>
+                </div>
+            </div>
+          <% end %>
+        </div>
+    </div>
 
+  <!-- <div class="btn btn-primary"> -->
+    <div class="flex-creat">
+      <%= link_to "Créer un cocktail", new_cocktail_path, class: "btn btn-primary" %>
+
+    </div>
 </div>
-</div>
+<!-- </div> -->
+
+
+
+
 
 
 <!-- <div class="card" style="width: 18rem;">
