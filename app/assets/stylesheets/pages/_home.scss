@@ -11,8 +11,14 @@
   margin-bottom: 35px;
 }
 
-.background-img {
- background-image: url("../../../images/cocktail-img.jpg");
- background-size: 100vh;
- height: 100vh;
+.background {
+  background-color: rgb(0,0,20);
+  background-size: 200vh;
+  height: 200vh;
+  background-repeat: none;
+  background: cover;
+
 }
+
+
+ // background-image: asset-url("cocktail-img.jpg");

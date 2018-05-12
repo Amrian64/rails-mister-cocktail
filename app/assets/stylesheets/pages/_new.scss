@@ -1,0 +1,14 @@
+.new-background-img {
+  background-image: asset-url("nigth-cocktail.jpg");
+  background-position: center;
+  height: 100vh;
+}
+
+.new-form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+
+}

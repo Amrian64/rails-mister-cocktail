@@ -1,8 +1,14 @@
+<div class="new-background-img">
+  <div class="container">
+    <%= form_for(@cocktail) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.submit %>
+    <% end %>
 
-<%= form_for(@cocktail) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
-<% end %>
+    <%= link_to "Back" , cocktails_path%>
+  </div>
+</div>
 
-<%= link_to "Back" , cocktails_path%>
+
+
