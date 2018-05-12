@@ -6,24 +6,36 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts 'Cleaning database...'
-Cocktail.destroy_all
-Ingredient.destroy_all
+# url = "http://static.giantbomb.com/uploads/original/9/99864/2419866-nes_console_set.png"
+# article = Article.new(title: 'NES', body: "A great console")
+# article.remote_photo_url = url
+# article.save
+
+# Galaxy.destroy_all
+# Galaxy.create!(name: 'Andromeda', remote_photo_url: 'http://apod.nasa.gov/apod/image/1407/m31_bers_960.jpg', address: 'next to the Milky Way')
+
+# puts 'Cleaning database...'
+# Cocktail.destroy_all
+# Ingredient.destroy_all
 
 
 puts 'Creating cocktails...'
 cocktails_attributes = [
   {
     name:         'Mojito',
+    photo:        'http://apod.nasa.gov/apod/image/1407/m31_bers_960.jpg',
   },
   {
     name:         'Cuba libre',
+    photo:'http://apod.nasa.gov/apod/image/1407/m31_bers_960.jpg',
   },
   {
     name:         'Gin tonic',
+    photo: 'http://apod.nasa.gov/apod/image/1407/m31_bers_960.jpg',
   },
   {
     name:         'Planter',
+    photo: 'http://apod.nasa.gov/apod/image/1407/m31_bers_960.jpg',
   },
 ]
 
